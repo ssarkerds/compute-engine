@@ -6,7 +6,8 @@ import org.apache.ignite.*;
 
 public class App {
 	public static void main(String[] args) throws IgniteException {
-        try (Ignite ignite = Ignition.start("config/example-ignite.xml")) {
+		Ignition.setClientMode(true);
+		try (Ignite ignite = Ignition.start("config/example-ignite.xml")) {
             System.out.println();
             System.out.println(">>> Compute broadcast example started.");
 
